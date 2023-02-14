@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1=title
+    if isZoom
+        p nope
+    else
+        p not zoom
+
+append scripts
+    if isZoom
+        script(type="module" src='/js/bundle.mjs')
+        script(nomodule src='/js/bundle.js')
+
